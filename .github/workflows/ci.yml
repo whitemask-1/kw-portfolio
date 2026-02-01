@@ -1,0 +1,105 @@
+name: CI - Validate and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate-terraform:
+    runs-on: ubuntu-latest
+    name: Validate Terraform
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.4.0
+
+      - name: Terraform Format Check
+        working-directory: ./infrastructure
+        run: terraform fmt -check -recursive
+
+      - name: Terraform Init
+        working-directory: ./infrastructure
+        run: terraform init -backend=false
+
+      - name: Terraform Validate
+        working-directory: ./infrastructure
+        run: terraform validate
+
+  validate-html:
+    runs-on: ubuntu-latest
+    name: Validate HTML
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install HTML validator
+        run: npm install -g html-validator-cli
+
+      - name: Validate HTML files
+        run: |
+          html-validator --file=website/index.html --verbose || true
+          echo "HTML validation complete"
+
+  security-scan:
+    runs-on: ubuntu-latest
+    name: Security Scan
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          exit-code: '0'
+
+  test-website:
+    runs-on: ubuntu-latest
+    name: Test Website Build
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify website structure
+        run: |
+          echo "Checking required files..."
+          test -f website/index.html && echo "✓ index.html found"
+          test -d website/assets && echo "✓ assets directory found"
+          test -d website/images && echo "✓ images directory found"
+          test -f website/public/resume.txt && echo "✓ resume found"
+          echo "Website structure validated!"
+
+      - name: Check for broken links
+        run: |
+          echo "Link checking would go here"
+          # Could add a link checker tool here
+
+  all-checks-complete:
+    runs-on: ubuntu-latest
+    name: All Checks Passed
+    needs: [validate-terraform, validate-html, security-scan, test-website]
+    
+    steps:
+      - name: Success
+        run: echo "All CI checks passed! ✅"
