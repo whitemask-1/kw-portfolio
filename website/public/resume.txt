@@ -1,0 +1,50 @@
+
+1
+
+Automatic Zoom
+Kevin Williams Tallahassee, FL | 919-744-5774 | kevin.williams2218@gmail.com | www.linkedin.com/in/kevine-w2218 
+ 
+ 
+ 
+Summary                                 
+Statistics major with a strong focus on cloud infrastructure, data pipelines, and automation. AWS Certified 
+Solutions Architect with hands-on experience building containerized systems, CI/CD pipelines, and 
+Infrastructure as Code using Terraform. Interested in data engineering, cloud platforms, and scalable backend 
+systems. 
+Education 
+Florida State University — Tallahassee, FL (Sophomore)        Expected Graduation: May 2028 
+Bachelor of Science in Statistics | Minor in Computational Science 
+Technical Projects 
+Cloud-Native CI/CD Pipeline on AWS (ECS + Fargate)   
+https://github.com/whitemask-1/fargate-deploy-pipeline 
+• Built an automated CI/CD pipeline using GitHub Actions, Docker, and AWS ECS/Fargate to deploy containerized 
+services with logging, health checks, and versioned releases.  
+News Analytics Pipeline (In-Progress) 
+• Designing a Python-based news data ingestion and analytics pipeline integrating multiple public APIs, with emphasis on 
+automation, reliability, and scalable system design.  
+Python Playground (Systems & Data Experiments)   
+https://github.com/whitemask-1/python-playground 
+• Developed a structured Python repository of mini-projects and experiments applying data structures, API integration, 
+error handling, and object-oriented design to real-world problems. 
+Certifications 
+AWS Certified Solutions Architect – Associate (SAA-C03)                  Achieved Jan 2026  
+https://www.credly.com/badges/ff8b622f-b953-4311-ab2b-b1a28bea249f/public_url 
+Skills 
+AWS (EC2, ECS, EKS, Fargate, IAM, CloudWatch), Terraform, Docker, Kubernetes, GitHub Actions, CI/CD, Python, 
+Shell, Node.js, APIs, data ingestion pipelines, JSON, Git, Linux, VS Code 
+Work Experience 
+1 Five 3 Electric - Electrical Apprentice (Residential & Commercial) (Pittsboro, NC | Summer 2025) 
+• Installed, wired, and tested electrical components across residential and limited commercial job sites, including control 
+panels, lighting systems, outlets, switches, and circuits 
+• Read and followed electrical diagrams, layouts, and specifications to ensure correct system configuration 
+• Assisted with troubleshooting and repairing electrical faults while maintaining strict safety and code compliance 
+Aquatic Management Group — Lifeguard (Raleigh, NC | June 2021 – August 2023) (Seasonal) 
+• Maintained constant monitoring of dynamic, high-risk environments requiring rapid response and adherence to strict 
+safety protocols 
+• Followed standardized operating procedures and checklists to ensure safety and compliance 
+• Coordinated with team members during incidents, emphasizing communication, escalation, and reliability 
+Township — Line Cook (Tallahassee, FL | September 2025 – Present) 
+• Operated in a high-pressure, time-critical environment requiring consistency, precision, and adherence to established 
+procedures 
+• Followed strict safety, sanitation, and quality standards while preparing and serving food at scale 
+ 

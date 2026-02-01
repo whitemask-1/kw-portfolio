@@ -73,4 +73,4 @@ Design template by [HTML5 UP](https://html5up.net) under CCA 3.0 license.
 
 Kevin Williams - [kevin.williams2218@gmail.com](mailto:kevin.williams2218@gmail.com)
 
-Portfolio: [Live Site URL]
+Portfolio: [\[Live Site URL\]](https://d2hp309s7roz8n.cloudfront.net)
