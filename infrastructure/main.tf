@@ -27,7 +27,7 @@ resource "aws_s3_bucket_website_configuration" "portfolio" {
 # Enable S3 versioning for backup and recovery
 resource "aws_s3_bucket_versioning" "portfolio" {
   bucket = aws_s3_bucket.portfolio.id
-  
+
   versioning_configuration {
     status = "Enabled"
   }
@@ -67,13 +67,13 @@ resource "aws_s3_bucket_policy" "portfolio" {
     Version = "2012-10-17"
     Statement = [
       {
-        Sid       = "AllowCloudFrontOAI"
-        Effect    = "Allow"
+        Sid    = "AllowCloudFrontOAI"
+        Effect = "Allow"
         Principal = {
           AWS = aws_cloudfront_origin_access_identity.portfolio.iam_arn
         }
-        Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.portfolio.arn}/*"
+        Action   = "s3:GetObject"
+        Resource = "${aws_s3_bucket.portfolio.arn}/*"
       }
     ]
   })
@@ -120,7 +120,7 @@ resource "aws_cloudfront_distribution" "portfolio" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
   aliases             = var.domain_name != "" ? [var.domain_name] : []
-  price_class         = "PriceClass_100"  # Use only North America and Europe edge locations
+  price_class         = "PriceClass_100" # Use only North America and Europe edge locations
 
   # Enable logging
   logging_config {
@@ -153,7 +153,7 @@ resource "aws_cloudfront_distribution" "portfolio" {
     }
 
     min_ttl     = 0
-    default_ttl     = 3600
+    default_ttl = 3600
     max_ttl     = 86400
 
     # Security headers
@@ -170,7 +170,7 @@ resource "aws_cloudfront_distribution" "portfolio" {
     cloudfront_default_certificate = var.domain_name == "" ? true : false
     acm_certificate_arn            = var.domain_name != "" ? aws_acm_certificate.portfolio[0].arn : null
     ssl_support_method             = var.domain_name != "" ? "sni-only" : null
-    minimum_protocol_version       = "TLSv1.2_2021"  # Strong TLS only
+    minimum_protocol_version       = "TLSv1.2_2021" # Strong TLS only
   }
 
   # Custom error responses
