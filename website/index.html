@@ -26,7 +26,7 @@
 						<div class="inner">
 							<h1>Kevin Williams</h1>
 					<p>AWS Solutions Architect | Statistics @ FSU<br />
-					Building cloud infrastructure, CI/CD pipelines, and data systems</p>
+					Building data intensive infrastructure and real-world solutions</p>
 							</div>
 						</div>
 						<nav>
@@ -47,8 +47,8 @@
 						<article id="intro">
 							<h2 class="major">Intro</h2>
 							<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-							<p>Hey! I'm Kevin Williams (on the right), a Statistics major at Florida State University with a strong focus on cloud infrastructure, data pipelines, and automation. I'm an AWS Certified Solutions Architect with hands-on experience building containerized systems, CI/CD pipelines, and Infrastructure as Code using Terraform.</p>
-							<p>I'm interested in data engineering, cloud platforms, and scalable backend systems. Currently exploring the intersection of statistical computing and cloud infrastructure while building real-world projects that solve practical problems. Check out my <a href="#work">recent projects</a> to see what I've been working on.</p>
+							<p>Hey! I'm Kevin Williams (on the right), a Statistics major at Florida State University who's been writing code since the age of 8 and haven't stopped building things since. I focus on data engineering: designing systems that move, store, and make sense of data at scale.</p>
+							<p>Most of my projects start with a real problem I want to solve - whether that's a serverless analytics pipeline on AWS or a quantitative finance tool built from scratch. Check out my <a href="#work">recent projects</a> to see what I've been working on.</p>
 						</article>
 
 						<!-- Work -->
@@ -56,21 +56,19 @@
 							<h2 class="major">Projects</h2>
 							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 							
-							<h3>Cloud Portfolio Website with Terraform & AWS</h3>
-							<p>Built a cloud-native portfolio website deployed on AWS using S3, CloudFront CDN, and Terraform Infrastructure as Code. Implemented automated CI/CD pipelines with GitHub Actions using OIDC authentication, security headers, and CloudFront OAI for secure content delivery.</p>
-							<p><a href="https://github.com/whitemask-1/kw-portfolio" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
-							
-							<h3>Cloud-Native CI/CD Pipeline on AWS (ECS + Fargate)</h3>
-							<p>Built an automated CI/CD pipeline using GitHub Actions, Docker, and AWS ECS/Fargate to deploy containerized services with logging, health checks, and versioned releases. Demonstrates end-to-end automation from code push to production deployment.</p>
-							<p><a href="https://github.com/whitemask-1/fargate-deploy-pipeline" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
+							<h3>Black-Scholes Pricing Engine</h3>
+							<p> A from-scratch implementation of the Black-Scholes-Merton (BSM) pricing model built to understand quantitative finance through the lens of applied mathematics — specifically how multivariable calculus and PDEs map directly to real financial instruments. Connects to live market data to back-solve implied volatility and surface potential mispricings against historical volatility.</p>
+							<p><a href="https://github.com/whitemask-1/black-scholes-engine" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
 							
 							<h3>Serverless News Analytics Platform</h3>
 							<p>Event-driven serverless platform built with AWS Lambda that ingests and analyzes news articles from multiple sources. Features async processing with SQS, Redis-based deduplication (30-50% storage savings), Parquet data lake on S3, and SQL analytics via Athena. Includes EventBridge scheduled ingestion, API Gateway rate limiting, and comprehensive Terraform IaC. Migrated from ECS to Lambda achieving 60-75% cost reduction while maintaining scalability.</p>
 							<p><a href="https://github.com/whitemask-1/news-analytics-api" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
 							
-							<h3>Python Playground (Systems & Data Experiments)</h3>
-							<p>A structured Python repository of mini-projects and experiments applying data structures, API integration, error handling, and object-oriented design to real-world problems. Includes various system design patterns and automation scripts.</p>
-							<p><a href="https://github.com/whitemask-1/python-playground" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
+							
+							<h3>Cloud Portfolio Website with Terraform & AWS</h3>
+							<p>Built a cloud-native portfolio website deployed on AWS using S3, CloudFront CDN, and Terraform Infrastructure as Code. Implemented automated CI/CD pipelines with GitHub Actions using OIDC authentication, security headers, and CloudFront OAI for secure content delivery.</p>
+							<p><a href="https://github.com/whitemask-1/kw-portfolio" target="_blank" class="icon brands fa-github"> View on GitHub</a></p>
+							
 						</article>
 
 						<!-- About -->
@@ -91,13 +89,13 @@
 							
 							<h3>Technical Skills</h3>
 							<ul>
-								<li><strong>Cloud Platforms:</strong> AWS (EC2, ECS, EKS, Fargate, IAM, CloudWatch, S3, VPC)</li>
-								<li><strong>Infrastructure as Code:</strong> Terraform</li>
-								<li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, AWS ECS/Fargate</li>
-								<li><strong>CI/CD:</strong> GitHub Actions</li>
-								<li><strong>Programming:</strong> Python, Shell, Node.js</li>
-								<li><strong>Data & APIs:</strong> JSON, REST APIs, data ingestion pipelines</li>
-								<li><strong>Tools:</strong> Git, Linux, VS Code</li>
+    						<li><strong>Cloud:</strong> AWS (S3, Lambda, ECS/Fargate, DynamoDB, Athena, SQS, EventBridge, CloudFront, IAM, VPC)</li>
+    						<li><strong>Infrastructure as Code:</strong> Terraform</li>
+    						<li><strong>Containers:</strong> Docker, Kubernetes</li>
+    						<li><strong>Data Engineering:</strong> pandas, numpy, PostgreSQL, Parquet, data ingestion pipelines</li>
+    						<li><strong>CI/CD:</strong> GitHub Actions</li>
+    						<li><strong>Programming:</strong> Python, Shell, Node.js</li>
+    						<li><strong>Tools:</strong> Git, Linux, Neovim</li>
 							</ul>
 							<p>I believe in continuous learning and hands-on experimentation. When I'm not working on cloud projects, I'm exploring new tools, contributing to GitHub repositories, or diving into statistical computing challenges.</p>
 						</article>
